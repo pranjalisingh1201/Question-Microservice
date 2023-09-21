@@ -9,4 +9,5 @@ Quiz App Monolithic Application has been divided into 2 microservices - Question
 - generate questions while creating the quiz
 - Get questions while fetching the quiz
 - get scores to get no of correct answers.
-- ![Uploading screenshot.png…]()
+- ![screenshot](https://github.com/pranjalisingh1201/Question-Microservice/assets/75729195/2194067f-4377-4c82-a223-0a216c48c325)
+
