@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "cd69eb7b-5356-46ff-a1ad-6df01a2a13d3",
+		"name": "Question-Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13738050"
+	},
+	"item": [
+		{
+			"name": "Get Score",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"id\": \"6\",\r\n        \"response\":\"8\" \r\n    },\r\n    {\r\n        \"id\": \"5\",\r\n        \"response\":\"4\" \r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/question/getScore",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"question",
+						"getScore"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Categorywise Questions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/question/category/java",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"question",
+						"category",
+						"java"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Questions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/question/allQuestions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"question",
+						"allQuestions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Question",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"questionTitle\": \"Float data type is of byte?\",\r\n        \"option1\": \"16\",\r\n        \"option2\": \"2\",\r\n        \"option3\": \"4\",\r\n        \"option4\": \"8\",\r\n        \"rightAnswer\": \"4\",\r\n        \"difficultylevel\": \"EASY\",\r\n        \"category\": \"JAVA\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/question/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"question",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Quiz",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[6,5]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/question/getQuestions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"question",
+						"getQuestions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Quiz",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/question/generate?category=JAVA&noOfQuestions=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"question",
+						"generate"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "JAVA"
+						},
+						{
+							"key": "noOfQuestions",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

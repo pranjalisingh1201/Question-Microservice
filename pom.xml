@@ -15,6 +15,7 @@
 	<description>Microservice - Question Service</description>
 	<properties>
 		<java.version>1.8</java.version>
+		<spring-cloud.version>Edgware.SR6</spring-cloud.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -39,21 +40,33 @@
 		<dependency>
     		<groupId>org.springframework.cloud</groupId>
    			<artifactId>spring-cloud-starter-openfeign</artifactId>
-    		<version>4.0.4</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client -->
 		<dependency>
 		    <groupId>org.springframework.cloud</groupId>
 		    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-		    <version>4.0.3</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+    		<groupId>org.springframework.boot</groupId>
+    		<artifactId>spring-boot-starter-actuator</artifactId>
+	</dependency>
 	</dependencies>
-
+	<dependencyManagement>
+	    <dependencies>
+	        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-dependencies -->
+			<dependency>
+			    <groupId>org.springframework.cloud</groupId>
+			    <artifactId>spring-cloud-dependencies</artifactId>
+			    <version>Edgware.SR6</version>
+			    <type>pom</type>
+			    <scope>import</scope>
+			</dependency>
+	    </dependencies>
+	</dependencyManagement>
 	<build>
 		<plugins>
 			<plugin>
@@ -68,6 +81,6 @@
 					</excludes>
 				</configuration>
 			</plugin>
-		</plugins>	</build>
-
+		</plugins>
+	</build>
 </project>
